@@ -1,0 +1,227 @@
+.content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.section-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+/* section */
+#section {
+    width: 100vw;
+    /* height: 100vh; */
+    position: relative;
+}
+
+.section-number-one {
+    height: 100vh;
+}
+.section-number-trhee {
+    height: 100vh;
+    background-color: #93862C;
+}
+
+.section-number-two {
+    min-height: 100vh;
+    background-color: #93862C;
+}
+
+.breads {
+    line-height: 0;
+}
+
+#breads-1 {
+    color: #000000;
+    font-family: "051d1426d208eda9-s";
+    font-size: 3vw;
+    left: 7%;
+    position: absolute;
+    bottom: 7%;
+    display: inline-block;
+}
+
+#breads-2 {
+    color: #96FF00;
+    font-family: "051d1426d208eda9-s";
+    font-size: 3vw;
+    position: absolute;
+    left: 7%;
+    bottom: 7%;
+    display: inline-block;
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reveal {
+    position: absolute;
+    background-color: #93862C;
+    top: 2px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.reveal .image-01 {
+    position: absolute;
+    width: 23vw;
+    height: 33vh;
+    top: 10%;
+    left: 7%;
+}
+
+.reveal .image-02 {
+    position: absolute;
+    width: 52vw;
+    height: 80vh;
+    top: 15%;
+    right: 2%;
+}
+
+.container-reveal {
+    width: 100%;
+    height: 100%;
+    /* position: absolute; */
+}
+
+#img-one {
+    position: absolute;
+    width: 23vw;
+    height: 33vh;
+    top: 10%;
+    left: 7%;
+    object-fit: cover;
+    background-image: url("../../../assets/image/test01.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#img-two {
+    position: absolute;
+    width: 52vw;
+    height: 80vh;
+    top: 15%;
+    right: 2%;
+    object-fit: cover;
+    background-image: url("../../../assets/image/und-bread01.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.second {
+    display: block;
+    background-color: #93862C;
+    position: relative;
+    top: 1px;
+}
+
+.second p {
+    width: 30vw;
+    position: relative;
+    left: 7%;
+    font-size: 15px;
+    font-family: "45ab4dc4133b69bf-s";
+    color: #96FF00;
+    line-height: 1.1vw;
+    font-weight: 100;
+    text-align: left;
+}
+
+.container-images {
+    width: 100vw;
+    height: 100%;
+
+}
+
+.content-images {
+    width: 100%;
+    height: 150vh;
+    position: relative;
+    background-color: #93862C;
+    top: 1px;
+}
+
+.content-image-1-img-1 {
+    width: 40vw;
+    height: 40vw;
+    background-image: url("../../../assets/image/bread-condensed-01.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    left: 2%;
+    position: absolute;
+    top: 40%;
+}
+
+.content-image-1-img-2 {
+    width: 40vw;
+    height: 40vw;
+    background-image: url("../../../assets/image/basic-bread01.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    right: 2%;
+    position: absolute;
+    top: 40%;
+}
+
+.content-image-2-img-1 {
+    width: 55vw;
+    height: 40vw;
+    background-image: url("../../../assets/image/bread-basic-2loaf.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    left: 2%;
+    position: absolute;
+    top: 0%;
+}
+
+.content-image-2-img-2 {
+    width: 33vw;
+    height: 32vw;
+    background-image: url("../../../assets/image/bread-chocolate-01.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    right: 2%;
+    position: absolute;
+    top: 5%;
+}
+
+.content-text-fixed {
+    width: 100%;
+    /* width: max-content; */
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    text-align: center;
+    font-family: "45ab4dc4133b69bf-s";
+    color: #96FF00;
+}
+.content-text-fixed h1{
+    font-size: 11vw;
+    font-weight: 900;
+    letter-spacing: -10px;
+
+}
+.content-text-fixed h2 {
+    font-size: 2.3vw;
+    font-weight: 500;
+}
