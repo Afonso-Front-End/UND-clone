@@ -13,6 +13,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import ScrollToTop from "./ScrollTop";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger)
+
+import Section_01 from "../home/section-01/Section-01";
 const App = () => {
     const containerRef = useRef(null)
 
@@ -40,8 +42,9 @@ const App = () => {
                 <div id="content">
                     <ScrollToTop />
                     <Header />
-                    <WarreperText />
-                    {/* <Content/> */}
+                    {/* <WarreperText /> */}
+                    <Content/>
+                    <Section_01/>
                 </div>
             </div>
         </Router>

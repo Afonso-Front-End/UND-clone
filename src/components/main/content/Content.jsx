@@ -1,91 +1,91 @@
-import gsap from "gsap";
 import "./content.css";
 import { useEffect, useRef } from "react";
+import gsap from "gsap";
 import SplitText from "gsap-trial/SplitText";
 import ScrollTrigger from "gsap-trial/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 import img01 from "../../../assets/image/test02.webp"
 import img02 from "../../../assets/image/und-bread.webp"
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const Content = () => {
 
-    useGSAP(() => {
-        let contexto = gsap.context(() => {
-            ScrollTrigger.create({
-                trigger: ".section-number-one",
-                start: "top top",
-                end: "bottom 0%",
-                scrub: 1,
-                pin: ".section-number-one",
-            });
+    // useGSAP(() => {
+    //     let contexto = gsap.context(() => {
+    //         ScrollTrigger.create({
+    //             trigger: ".section-number-one",
+    //             start: "top top",
+    //             end: "bottom 0%",
+    //             scrub: 1,
+    //             pin: ".section-number-one",
+    //         });
 
-            ScrollTrigger.create({
-                trigger: ".section-number-two",
-                start: "top 20%",
-                end: "+=250%",
-                markers: true,
-                scrub: 1,
-                pin: ".content-text-fixed",
-            });
-        });
-        return () => {
-            contexto.revert();
-        };
-    }, []);
+    //         ScrollTrigger.create({
+    //             trigger: ".section-number-two",
+    //             start: "top 20%",
+    //             end: "+=250%",
+    //             markers: true,
+    //             scrub: 1,
+    //             pin: ".content-text-fixed",
+    //         });
+    //     });
+    //     return () => {
+    //         contexto.revert();
+    //     };
+    // }, []);
 
-    useGSAP(() => {
-        let contexto = gsap.context(() => {
-            let revealContainer = document.querySelectorAll(".reveal");
+    // useGSAP(() => {
+    //     let contexto = gsap.context(() => {
+    //         let revealContainer = document.querySelectorAll(".reveal");
 
-            revealContainer.forEach((container) => {
-                let image = container.querySelector("img")
-                let timeline = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: container,
-                        scrub: 0.5,
-                        start: "top 0%",
-                        end: "bottom 0%",
-                    }
-                })
+    //         revealContainer.forEach((container) => {
+    //             let image = container.querySelector("img")
+    //             let timeline = gsap.timeline({
+    //                 scrollTrigger: {
+    //                     trigger: container,
+    //                     scrub: 0.5,
+    //                     start: "top 0%",
+    //                     end: "bottom 0%",
+    //                 }
+    //             })
 
 
-                timeline.set(container, { autoAlpha: 1 })
-                timeline.fromTo(container,
-                    { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", duration: 1, ease: "none" },
-                    { clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)", duration: 1, ease: "none" },
-                )
+    //             timeline.set(container, { autoAlpha: 1 })
+    //             timeline.fromTo(container,
+    //                 { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", duration: 1, ease: "none" },
+    //                 { clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)", duration: 1, ease: "none" },
+    //             )
 
-                const timelineChars = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: ".section-number-one",
-                        start: "30% 20%",
-                        end: "bottom 0%",
-                        scrub: 1,
-                    }
-                })
-                const breads1 = new SplitText(".breads", { type: "chars" })
-                const breadsChars1 = breads1.chars
-                timelineChars.fromTo(breadsChars1,
-                    { fontSize: "3vw", duration: 1, stagger: 0.05, ease: "none" },
-                    { fontSize: "16vw", duration: 1, stagger: 0.05, ease: "none" },
-                )
+    //             const timelineChars = gsap.timeline({
+    //                 scrollTrigger: {
+    //                     trigger: ".section-number-one",
+    //                     start: "30% 20%",
+    //                     end: "bottom 0%",
+    //                     scrub: 1,
+    //                 }
+    //             })
+    //             const breads1 = new SplitText(".breads", { type: "chars" })
+    //             const breadsChars1 = breads1.chars
+    //             timelineChars.fromTo(breadsChars1,
+    //                 { fontSize: "3vw", duration: 1, stagger: 0.05, ease: "none" },
+    //                 { fontSize: "16vw", duration: 1, stagger: 0.05, ease: "none" },
+    //             )
 
-            })
-        });
+    //         })
+    //     });
 
-        return () => {
-            contexto.revert();
-        };
-    }, []);
+    //     return () => {
+    //         contexto.revert();
+    //     };
+    // }, []);
 
     return (
         <div className="content">
             <div className="section-wrapper">
 
-                <section id="section" className="section-number-one one">
+                {/* <section id="section" className="section-number-one one">
 
                     <div className="container-reveal">
                         <div id="img-one"></div>
@@ -98,16 +98,16 @@ const Content = () => {
                         </div>
                     </div>
 
-                </section>
+                </section> */}
 
-                <div className="second">
+                {/* <div className="second">
                     <p>Our bread is handmade with carefully selected, safe, and secure ingredients, and is completely additive-free. We use organic flour and a unique formula that includes up to 75% almond milk, heavy cream, and water to create a moist, fluffy bread with a mellow flavor. Almond milk contains less fat and fewer calories than raw milk, and is rich in minerals and vitamins. It also adds natural sweetness and a mellow mouthfeel, giving it a taste more akin to brioche than ordinary bread.
                         Three different flavors are available: Basic, Chocolate, and Condensed Milk.
                     </p>
 
-                </div>
+                </div> */}
 
-                <section id="section" className="section-number-two tow">
+                {/* <section id="section" className="section-number-two tow">
                     <div className="content-text-fixed">
                         <h1>Almond Milk Bread</h1>
                         <h2>A moist, fluffy bread with a mellow flavor.</h2>
@@ -126,11 +126,11 @@ const Content = () => {
                         </div>
 
                     </div>
-                </section>
+                </section> */}
 
-                <section id="section" className="section-number-trhee trhee">
+                {/* <section id="section" className="section-number-trhee trhee">
                    
-                </section>
+                </section> */}
             </div>
         </div>
     );
